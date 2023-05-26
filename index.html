@@ -61,12 +61,12 @@
     </header>
     <!--Herro section-->
     <main>
-      <!-- <section class="herro">
+      <section class="herro">
         <div class="container">
           <h1 class="herro-title">Effective Solutions for Your Business</h1>
           <button class="herro-button button" type="button" data-modal-open>Order Service</button>
         </div>
-      </section> -->
+      </section>
       <!-- Feature section-->
       <section class="feature">
         <div class="container">
@@ -131,7 +131,11 @@
             <li class="about-item card-set-item">
               <img
                 class="about-img"
-                src="./images/what-are-we-doing/img1.jpg"
+                srcset="
+                  ./images/what-are-we-doing/picture1@1x.jpg 1x,
+                  ./images/what-are-we-doing/picture1@2x.jpg 2x
+                "
+                src="./images/what-are-we-doing/picture1@1x.jpg"
                 alt="display"
                 width="360"
                 height="300"
@@ -140,7 +144,11 @@
             <li class="about-item card-set-item">
               <img
                 class="about-img"
-                src="./images/what-are-we-doing/img2.jpg"
+                srcset="
+                  ./images/what-are-we-doing/picture2@1x.jpg 1x,
+                  ./images/what-are-we-doing/picture2@2x.jpg 2x
+                "
+                src="./images/what-are-we-doing/picture2@1x.jpg"
                 alt="phone screen"
                 width="360"
                 height="300"
@@ -149,7 +157,11 @@
             <li class="about-item card-set-item">
               <img
                 class="about-img"
-                src="./images/what-are-we-doing/img3.jpg"
+                srcset="
+                  ./images/what-are-we-doing/picture3@1x.jpg 1x,
+                  ./images/what-are-we-doing/picture3@2x.jpg 2x
+                "
+                src="./images/what-are-we-doing/picture3@1x.jpg"
                 alt="work display"
                 width="360"
                 height="300"
@@ -166,7 +178,8 @@
             <li class="team-item card-set-item">
               <img
                 class="team-item-img"
-                src="./images/our-team/img.jpg"
+                srcset="./images/our-team/img@1x-1.jpg 1x, ./images/our-team/img@2x-1.jpg 2x"
+                src="./images/our-team/img@1x-1.jpg"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -233,7 +246,8 @@
             <li class="team-item card-set-item">
               <img
                 class="team-item-img"
-                src="./images/our-team/img-2.jpg"
+                srcset="./images/our-team/img@1x-2.jpg 1x, ./images/our-team/img@2x-2.jpg 2x"
+                src="./images/our-team/img@1x-2.jpg"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -300,7 +314,8 @@
             <li class="team-item card-set-item">
               <img
                 class="team-item-img"
-                src="./images/our-team/img-3.jpg"
+                srcset="./images/our-team/img@1x-3.jpg 1x, ./images/our-team/img@2x-3.jpg 2x"
+                src="./images/our-team/img@1x-3.jpg"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -367,7 +382,8 @@
             <li class="team-item card-set-item">
               <img
                 class="team-item-img"
-                src="./images/our-team/img-4.jpg"
+                srcset="./images/our-team/img@1x-4.jpg 1x, ./images/our-team/img@2x-4.jpg 2x"
+                src="./images/our-team/img@1x-4.jpg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -486,7 +502,7 @@
       </section>
     </main>
     <!--Footer section-->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer-container container">
         <div class="footer-left-side">
           <a class="logo link footer-logo" href="/index.html"
@@ -554,7 +570,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="footer-subscribe-wrap">
           <p class="footer-title">Subscribe</p>
           <form class="footer-subscribe">
             <input class="footer-subscribe-form" type="email" name="email" placeholder="E-mail" />
@@ -567,7 +583,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -628,31 +644,27 @@
 
     <!-- Mobile menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
-        <svg
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-            clip-rule="evenodd"
-          ></path>
+      <button class="modal-close-btn mobile-close-btn button js-close-menu">
+        <svg class="modal-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close-black"></use>
         </svg>
       </button>
 
       <ul class="mobile-menu list">
-        <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Studio</a></li>
-        <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Portfolio</a></li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link current" href="./index.html">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a>
+        </li>
         <li class="mobile-menu-item"><a class="mobile-menu-link link" href="">Contacts</a></li>
       </ul>
 
       <ul class="mobile-contacts list">
-        <li><a href="tel:+11000111111" class="link">+11 (000) 111-11-11</a></li>
-        <li><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+        <li><a href="tel:+11000111111" class="mobile-menu-tel link">+11 (000) 111-11-11</a></li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="mobile-menu-email link">info@devstudio.com</a>
+        </li>
       </ul>
 
       <ul class="social-footer social-mobile list">
