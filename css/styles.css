@@ -48,8 +48,6 @@ body {
 }
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 input {
   padding: 0;
@@ -118,8 +116,8 @@ input {
   |============================
 */
 .container {
-  min-width: 320px;
   max-width: 428px;
+  min-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -141,6 +139,7 @@ input {
 */
 .card-set {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: var(--indent-row) var(--indent-column);
 }
@@ -323,7 +322,8 @@ input {
 @media only screen and (min-width: 1158px) {
   .footer-container {
     flex-wrap: nowrap;
-    padding-left: 0;
+    padding-left: 15px;
+    gap: 0;
   }
 }
 .footer-title {
@@ -386,6 +386,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 40px;
 
   font-weight: 500;
   font-size: 16px;
@@ -393,7 +394,7 @@ input {
   letter-spacing: 0.04em;
 
   color: var(--color-white);
-
+  margin: 0 auto;
   padding: 8px 24px;
   gap: 16px;
   border-radius: 4px;
@@ -407,21 +408,17 @@ input {
   background-color: var(--color-ocean);
 }
 .footer-subscribe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .footer-subscribe {
-    flex-direction: row;
+    display: flex;
     justify-content: flex-start;
     gap: 24px;
   }
 }
 .footer-subscribe-form {
-  width: 398px;
+  width: 100%;
   height: 40px;
   background-color: transparent;
   border: 1px solid var(--color-white);
@@ -435,6 +432,7 @@ input {
   line-height: 2;
   align-items: center;
   letter-spacing: 0.04em;
+  margin-bottom: 16px;
 
   padding: 8px 16px;
 
@@ -460,6 +458,7 @@ input {
 }
 .footer-subscribe-wrap {
   display: flex;
+  min-width: 288px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -527,7 +526,7 @@ input {
   }
 }
 .herro-title {
-  width: 320px;
+  max-width: 320px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0;
@@ -610,7 +609,7 @@ input {
 }
 .feature-text {
   font-weight: 500;
-  min-width: 396px;
+  max-width: 396px;
 }
 @media only screen and (min-width: 768px) {
   .feature-text {
@@ -799,7 +798,8 @@ input {
 }
 @media only screen and (min-width: 1158px) {
   .customer-item {
-    --items: 6;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 .customer-link {
@@ -1257,7 +1257,7 @@ input {
 
 .mobile-menu-tel {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 1.11;
 
   letter-spacing: 0.02em;
@@ -1275,7 +1275,7 @@ input {
   color: var(--color-slate);
 }
 .social-mobile {
-  gap: 56px;
+  gap: 32px;
   justify-content: flex-start;
 }
 
