@@ -26,6 +26,8 @@
 
   --header-idx: 10;
   --modal-idx: 100;
+
+  --animation-delay: 0ms;
 }
 /**
   |============================
